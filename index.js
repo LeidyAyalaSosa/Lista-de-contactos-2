@@ -79,15 +79,16 @@ const nuevoLengthPush = (contactos.push({
   correo: window.prompt("Ingrese su dirección de correo electrónico"),
 }));
 
-console.log(contactos);
+const eliminado = contactos.filter((contacto) => contacto.id !== 2);
 
-const nuevo = contactos.filter((contacto) => contacto.id !== 2);
-
-const eliminados = contactos.splice(2, 1, {
+contactos.splice(2, 1, {
   id: 3,
   nombreCompleto: "Aretha Louise Franklin",
   celular: "3004329031",
   correo: "ArethaFranklin.Respect@gmail.com",
 });
 
+console.log(eliminado);
+
 console.log(contactos);
+
